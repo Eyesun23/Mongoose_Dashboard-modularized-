@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+  <style>
+  *{
+    margin-top: 50px;
+    margin-left: 40px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  </style>
+</head>
+<body>
+  <h1>Edit <%= mongoose.name %>!</h1>
+  <form action="/mongooses/<%= mongoose.id %>" method='post'>
+    Name: <input type="text" name="name" value="<%= mongoose.name %>"><br>
+    <input type="submit" value="Edit Mongoose!">
+  </form>
+</body>
+</html>

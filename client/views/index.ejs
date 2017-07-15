@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        *{
+          margin-top: 50px;
+          margin-left: 40px;
+          padding: 0px;
+          font-family: 'Open Sans', sans-serif;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Mongoose Dashboard</h1>
+        <% for (var i = 0; i < mongoose.length; i++) { %>
+        <h3>Name: <a href="/<%= mongoose[i]._id %>"><%= mongoose[i].name %></a> </h3>
+        <a href="/<%= mongoose[i]._id %>/edit/">Edit</a>
+        <form class="" action="/<%= mongoose[i]._id %>/destroy/" method="post">
+            <input type="submit" name="" value="Destroy">
+        </form>
+        <% } %>
+    </body>
+</html>
